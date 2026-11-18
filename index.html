@@ -218,8 +218,8 @@
       .services-grid { grid-template-columns: 1fr; }
       .contact .phone { font-size: 28px; }
       .footer-main {
-        grid-template-columns: 1.2fr 1fr;
-        grid-template-areas: "brand brand" "contact area" "contact license";
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "brand brand" "contact license";
         justify-content: stretch;
         gap: 22px 18px;
         padding: 40px 20px 28px;
@@ -227,7 +227,9 @@
       }
       .f-brand { grid-area: brand; display: flex; align-items: center; gap: 16px; }
       .f-contact { grid-area: contact; }
-      .f-area { grid-area: area; }
+      .f-area { display: none; }
+      .lic-num { display: block; }
+      .footer-bottom { font-size: min(12px, 3.4vw); white-space: nowrap; padding: 16px 10px; }
       .f-license { grid-area: license; }
       .footer-main img { height: 60px; margin: 0; }
       .footer-main .footer-tagline { margin: 0; }
@@ -327,7 +329,7 @@
       </div>
       <div class="f-license">
         <h4>License</h4>
-        <p>CSLB License #1162400</p>
+        <p>CSLB License <span class="lic-num">#1162400</span></p>
         <p><a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1162400" target="_blank" rel="noopener">Verify at cslb.ca.gov</a></p>
       </div>
     </div>
