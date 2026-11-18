@@ -4,76 +4,133 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visser Construction | Licensed Contractor</title>
-  <meta name="description" content="Visser Construction, owned by licensed contractor Marshall Visser.">
+  <meta name="description" content="Visser Construction LLC, owned by licensed contractor Marshall Visser. License #1162400.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --charcoal: #26292E;
+      --orange: #E2761B;
+      --light: #F5F3F0;
+      --text: #33363B;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
+      font-family: 'Source Sans 3', Arial, sans-serif;
+      color: var(--text);
       line-height: 1.6;
       background: #fff;
+      font-size: 17px;
+    }
+    h1, h2, h3 {
+      font-family: 'Oswald', 'Arial Narrow', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--charcoal);
+      line-height: 1.2;
     }
     .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
     /* Header */
     header {
-      background: #1f2a36;
-      color: #fff;
-      padding: 18px 0;
+      background: #fff;
+      border-bottom: 4px solid var(--orange);
+      padding: 14px 0;
     }
-    .logo { font-size: 22px; font-weight: bold; letter-spacing: 1px; }
-    .logo span { color: #f2a33a; }
+    header img { height: 70px; width: auto; display: block; }
 
     /* Hero */
     .hero {
-      background: #2c3e50;
+      background: var(--charcoal);
       color: #fff;
       text-align: center;
-      padding: 90px 20px;
+      padding: 90px 20px 80px;
     }
-    .hero h1 { font-size: 40px; margin-bottom: 12px; }
-    .hero p { font-size: 19px; color: #dfe6ec; }
+    .hero h1 { color: #fff; font-size: 52px; font-weight: 700; }
+    .hero .rule {
+      width: 70px;
+      height: 4px;
+      background: var(--orange);
+      margin: 20px auto;
+    }
+    .hero p { font-size: 20px; color: #d9dbde; }
+    .hero .license {
+      margin-top: 14px;
+      font-size: 15px;
+      color: var(--orange);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .hero .verify {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #9fa3a9;
+    }
+    .hero .verify a { color: #d9dbde; text-decoration: underline; }
+    .hero .verify a:hover { color: var(--orange); }
 
     /* Sections */
     section { padding: 70px 0; }
     section h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
+      font-size: 32px;
       text-align: center;
-      color: #1f2a36;
+      margin-bottom: 10px;
     }
-    .about p { max-width: 720px; margin: 0 auto 14px; text-align: center; font-size: 17px; }
-    .alt { background: #f4f6f8; }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: var(--orange);
+      margin: 14px auto 26px;
+    }
+    .about p { max-width: 720px; margin: 0 auto 14px; text-align: center; }
+    .alt { background: var(--light); }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
-      margin-top: 30px;
     }
     .card {
       background: #fff;
-      border-top: 4px solid #f2a33a;
-      padding: 24px;
-      border-radius: 4px;
+      border-top: 4px solid var(--orange);
+      padding: 26px 24px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     }
-    .card h3 { margin-bottom: 8px; color: #1f2a36; }
+    .card h3 { font-size: 20px; margin-bottom: 8px; }
+    .services-intro { text-align: center; max-width: 720px; margin: 0 auto 28px; }
 
     .contact { text-align: center; }
-    .contact p { font-size: 18px; margin-bottom: 8px; }
+    .contact .phone {
+      font-family: 'Oswald', 'Arial Narrow', sans-serif;
+      font-size: 34px;
+      font-weight: 500;
+      color: var(--orange);
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .contact p { font-size: 18px; margin-bottom: 6px; }
 
     /* Footer */
     footer {
-      background: #1f2a36;
-      color: #c5ced6;
+      background: var(--charcoal);
+      color: #b9bcc1;
       text-align: center;
-      padding: 22px 20px;
+      padding: 24px 20px;
       font-size: 14px;
     }
+    footer strong { color: #fff; font-weight: 600; }
 
     @media (max-width: 600px) {
-      .hero h1 { font-size: 30px; }
+      header img { height: 56px; }
+      .hero { padding: 64px 20px 56px; }
+      .hero h1 { font-size: 36px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .contact .phone { font-size: 28px; }
     }
   </style>
 </head>
@@ -81,42 +138,46 @@
 
   <header>
     <div class="container">
-      <div class="logo">VISSER <span>CONSTRUCTION</span></div>
+      <img src="logo.png" alt="Visser Construction">
     </div>
   </header>
 
   <div class="hero">
     <h1>Visser Construction</h1>
-    <p>Licensed contractor. Quality work you can count on.</p>
+    <div class="rule"></div>
+    <p>Licensed general contractor committed to quality work and satisfied clients.</p>
+    <p class="license">Visser Construction LLC &bull; License #1162400</p>
+    <p class="verify">Verify our license at <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1162400" target="_blank" rel="noopener">cslb.ca.gov</a></p>
   </div>
 
   <section class="about">
     <div class="container">
       <h2>About Us</h2>
-      <p>Visser Construction is owned and operated by Marshall Visser, a licensed contractor.</p>
-      <!-- EDIT: Add a sentence or two about Marshall's experience, years in business, or service area -->
-      <p>[Add a short line about experience or service area here.]</p>
-      <!-- EDIT: Replace with the real license number, or delete this line -->
-      <p><strong>License #[XXXXXXX]</strong></p>
+      <p>Visser Construction is owned and operated by Marshall Visser, a licensed contractor in California.</p>
+      <p>We work directly with every client, from the first conversation to the final walkthrough, so you always know who's responsible for your project. Our goal on every job is the same: quality work and a client who's happy with the result.</p>
     </div>
   </section>
 
   <section class="alt">
     <div class="container">
       <h2>Services</h2>
-      <!-- EDIT: Replace these with the services Marshall actually offers. Copy/paste a card to add more. -->
+      <p class="services-intro">Visser Construction handles all general construction projects, including:</p>
       <div class="services-grid">
         <div class="card">
-          <h3>[Service 1]</h3>
-          <p>[Short description.]</p>
+          <h3>New Construction</h3>
+          <p>Ground-up building projects, from foundation to finish.</p>
         </div>
         <div class="card">
-          <h3>[Service 2]</h3>
-          <p>[Short description.]</p>
+          <h3>Remodels &amp; Renovations</h3>
+          <p>Kitchens, bathrooms, and whole-home updates.</p>
         </div>
         <div class="card">
-          <h3>[Service 3]</h3>
-          <p>[Short description.]</p>
+          <h3>Additions</h3>
+          <p>Added space built to match the existing structure.</p>
+        </div>
+        <div class="card">
+          <h3>Repairs &amp; Improvements</h3>
+          <p>Fixes, upgrades, and general repair work for your property.</p>
         </div>
       </div>
     </div>
@@ -125,14 +186,13 @@
   <section class="contact">
     <div class="container">
       <h2>Contact</h2>
-      <!-- EDIT: Replace with real phone and email -->
-      <p>Phone: [(000) 000-0000]</p>
-      <p>Email: [email@example.com]</p>
+      <p class="phone">(925) 628-6073</p>
+      <p>marshall@visserconstruction.net</p>
     </div>
   </section>
 
   <footer>
-    &copy; <span id="year"></span> Visser Construction &bull; Marshall Visser, Licensed Contractor
+    &copy; <span id="year"></span> <strong>Visser Construction LLC</strong> &bull; Marshall Visser, Licensed Contractor &bull; License #1162400
   </footer>
 
   <script>
