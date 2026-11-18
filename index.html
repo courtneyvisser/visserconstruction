@@ -39,7 +39,7 @@
       border-bottom: 4px solid var(--orange);
       padding: 14px 0;
     }
-    header img { height: 70px; width: auto; display: block; }
+    header img { height: 110px; width: auto; display: block; }
 
     /* Hero */
     .hero {
@@ -114,6 +114,8 @@
       margin-bottom: 6px;
     }
     .contact p { font-size: 18px; margin-bottom: 6px; }
+    .contact .email { color: var(--charcoal); text-decoration: underline; text-decoration-color: var(--orange); text-underline-offset: 4px; }
+    .contact .email:hover { color: var(--orange); }
 
     /* Footer */
     footer {
@@ -126,7 +128,7 @@
     footer strong { color: #fff; font-weight: 600; }
 
     @media (max-width: 600px) {
-      header img { height: 56px; }
+      header img { height: 80px; }
       .hero { padding: 64px 20px 56px; }
       .hero h1 { font-size: 36px; }
       .services-grid { grid-template-columns: 1fr; }
@@ -187,7 +189,7 @@
     <div class="container">
       <h2>Contact</h2>
       <p class="phone">(925) 628-6073</p>
-      <p>marshall@visserconstruction.net</p>
+      <p><a class="email" href="mailto:marshall@visserconstruction.net">marshall@visserconstruction.net</a></p>
     </div>
   </section>
 
