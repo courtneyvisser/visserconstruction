@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visser Construction | Licensed Contractor</title>
+  <meta name="description" content="Visser Construction, owned by licensed contractor Marshall Visser.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      line-height: 1.6;
+      background: #fff;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header {
+      background: #1f2a36;
+      color: #fff;
+      padding: 18px 0;
+    }
+    .logo { font-size: 22px; font-weight: bold; letter-spacing: 1px; }
+    .logo span { color: #f2a33a; }
+
+    /* Hero */
+    .hero {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 90px 20px;
+    }
+    .hero h1 { font-size: 40px; margin-bottom: 12px; }
+    .hero p { font-size: 19px; color: #dfe6ec; }
+
+    /* Sections */
+    section { padding: 70px 0; }
+    section h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #1f2a36;
+    }
+    .about p { max-width: 720px; margin: 0 auto 14px; text-align: center; font-size: 17px; }
+    .alt { background: #f4f6f8; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      background: #fff;
+      border-top: 4px solid #f2a33a;
+      padding: 24px;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .card h3 { margin-bottom: 8px; color: #1f2a36; }
+
+    .contact { text-align: center; }
+    .contact p { font-size: 18px; margin-bottom: 8px; }
+
+    /* Footer */
+    footer {
+      background: #1f2a36;
+      color: #c5ced6;
+      text-align: center;
+      padding: 22px 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">VISSER <span>CONSTRUCTION</span></div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Visser Construction</h1>
+    <p>Licensed contractor. Quality work you can count on.</p>
+  </div>
+
+  <section class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Visser Construction is owned and operated by Marshall Visser, a licensed contractor.</p>
+      <!-- EDIT: Add a sentence or two about Marshall's experience, years in business, or service area -->
+      <p>[Add a short line about experience or service area here.]</p>
+      <!-- EDIT: Replace with the real license number, or delete this line -->
+      <p><strong>License #[XXXXXXX]</strong></p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <h2>Services</h2>
+      <!-- EDIT: Replace these with the services Marshall actually offers. Copy/paste a card to add more. -->
+      <div class="services-grid">
+        <div class="card">
+          <h3>[Service 1]</h3>
+          <p>[Short description.]</p>
+        </div>
+        <div class="card">
+          <h3>[Service 2]</h3>
+          <p>[Short description.]</p>
+        </div>
+        <div class="card">
+          <h3>[Service 3]</h3>
+          <p>[Short description.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <!-- EDIT: Replace with real phone and email -->
+      <p>Phone: [(000) 000-0000]</p>
+      <p>Email: [email@example.com]</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Visser Construction &bull; Marshall Visser, Licensed Contractor
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
