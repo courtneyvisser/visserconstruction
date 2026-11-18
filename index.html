@@ -237,6 +237,31 @@
       footer h4 { font-size: 14px; margin-bottom: 8px; }
       .footer-email { white-space: nowrap; }
     }
+
+    /* Left-aligned layout */
+    .hero { text-align: left; padding-left: 0; padding-right: 0; }
+    .hero-inner { max-width: 1000px; }
+    .hero h1 { font-size: 56px; }
+    .hero .rule { margin: 20px 0; }
+    section h2 { text-align: left; }
+    section h2::after { margin: 14px 0 26px; }
+    .services-intro { text-align: left; margin: 0 0 28px; max-width: 720px; }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .split h2 { margin-bottom: 0; }
+    .about p { text-align: left; max-width: none; margin: 0 0 14px; }
+    .contact { text-align: left; }
+    .contact .phone { margin-top: -4px; }
+    @media (max-width: 600px) {
+      .hero { padding: 56px 0 48px; }
+      .hero h1 { font-size: 34px; }
+      .split { grid-template-columns: 1fr; gap: 0; }
+      .split h2 { margin-bottom: 10px; }
+    }
   </style>
 </head>
 <body>
@@ -252,19 +277,23 @@
   </header>
 
   <div class="hero">
+    <div class="container hero-inner">
     <h1>Visser Construction</h1>
     <div class="rule"></div>
     <p>Quality work and satisfied clients across Northern California.</p>
     <p class="license">Visser Construction LLC &bull; License #1162400</p>
     <p class="verify">Verify our license at <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1162400" target="_blank" rel="noopener">cslb.ca.gov</a></p>
+    </div>
   </div>
 
   <section class="about">
-    <div class="container">
+    <div class="container split">
       <h2>About Us</h2>
+      <div>
       <p>Visser Construction is owned and operated by Marshall Visser, a licensed contractor serving Northern California. Whether you're planning a remodel, an addition, a repair, or a new build, we bring the same care and attention to every project, no matter the size.</p>
       <p>We work directly with every client, from the first conversation to the final walkthrough, so you always know who's responsible for your project. We keep you informed along the way, answer your questions, and treat your home or property with respect while we work.</p>
       <p>Our goal on every job is the same: quality work that lasts and a client who's happy with the result.</p>
+      </div>
     </div>
   </section>
 
@@ -306,10 +335,12 @@
   </section>
 
   <section class="contact">
-    <div class="container">
+    <div class="container split">
       <h2>Contact</h2>
+      <div>
       <p class="phone"><a href="tel:+19256286073">(925) 628-6073</a></p>
       <p><a class="email" href="mailto:marshall@visserconstruction.net">marshall@visserconstruction.net</a></p>
+      </div>
     </div>
   </section>
 
