@@ -40,6 +40,24 @@
       padding: 14px 0;
     }
     header img { height: 110px; width: auto; display: block; }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .header-contact { text-align: right; line-height: 1.4; }
+    .header-contact a { color: var(--charcoal); text-decoration: none; display: block; }
+    .header-contact .header-phone {
+      font-family: 'Oswald', 'Arial Narrow', sans-serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--orange);
+      letter-spacing: 1px;
+    }
+    .header-contact .header-email { font-size: 16px; }
+    .header-contact a:hover { color: var(--orange); }
+    .header-contact .header-phone:hover { color: var(--charcoal); }
 
     /* Hero */
     .hero {
@@ -129,6 +147,10 @@
 
     @media (max-width: 600px) {
       header img { height: 80px; }
+      .header-inner { flex-direction: column; gap: 10px; }
+      .header-contact { text-align: center; }
+      .header-contact .header-phone { font-size: 22px; }
+      .header-contact .header-email { font-size: 15px; }
       .hero { padding: 64px 20px 56px; }
       .hero h1 { font-size: 36px; }
       .services-grid { grid-template-columns: 1fr; }
@@ -139,8 +161,12 @@
 <body>
 
   <header>
-    <div class="container">
+    <div class="container header-inner">
       <img src="logo.png" alt="Visser Construction">
+      <div class="header-contact">
+        <a class="header-phone" href="tel:+19256286073">(925) 628-6073</a>
+        <a class="header-email" href="mailto:marshall@visserconstruction.net">marshall@visserconstruction.net</a>
+      </div>
     </div>
   </header>
 
