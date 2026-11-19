@@ -205,6 +205,29 @@
     }
     footer p { margin-bottom: 6px; }
     .footer-tagline { white-space: nowrap; }
+    .footer-google { margin-top: 16px; }
+    .g-mobile { display: none; }
+    .footer-main { grid-template-columns: repeat(3, 1fr); }
+    .f-contact { justify-self: center; }
+    .f-license { justify-self: end; }
+    .footer-google a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px 8px 13px;
+      border: 1.5px solid var(--orange);
+      border-radius: 4px;
+      color: #fff;
+      font-family: 'Oswald', 'Arial Narrow', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background 0.2s ease;
+    }
+    .footer-google a svg { width: 16px; height: 16px; color: var(--orange); transition: color 0.2s ease; }
+    .footer-google a:hover { background: var(--orange); color: #fff; }
+    .footer-google a:hover svg { color: #fff; }
     footer a { color: #fff; text-decoration: none; }
     footer a:hover { color: var(--orange); }
     .footer-bottom {
@@ -245,6 +268,23 @@
       .f-license { grid-area: license; }
       .footer-main img { height: 60px; margin: 0; }
       .footer-main .footer-tagline { margin: 0; }
+      .footer-google { margin-top: 6px; }
+      .g-desktop, .g-desktop-text { display: none; }
+      .f-contact, .f-license { justify-self: start; }
+      .g-mobile { display: block; }
+      .footer-google a {
+        padding: 0;
+        border: none;
+        color: var(--orange);
+        font-family: 'Source Sans 3', Arial, sans-serif;
+        font-weight: 600;
+        font-size: inherit;
+        letter-spacing: 0;
+        text-transform: none;
+        gap: 5px;
+      }
+      .footer-google a svg { width: 13px; height: 13px; }
+      .footer-google a:hover { background: none; color: #fff; }
       footer h4 { font-size: 14px; margin-bottom: 8px; }
       .footer-email { white-space: nowrap; }
     }
@@ -274,6 +314,42 @@
       .split h2 { margin-bottom: 10px; }
     }
   </style>
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "Visser Construction",
+    "legalName": "Visser Construction LLC",
+    "url": "https://visserconstruction.net/",
+    "logo": "https://visserconstruction.net/icon.png",
+    "image": "https://visserconstruction.net/og-image.png",
+    "description": "Licensed general contractor serving Northern California. New construction, remodels and renovations, additions, and repairs and improvements.",
+    "telephone": "+1-925-628-6073",
+    "email": "marshall@visserconstruction.net",
+    "sameAs": [
+      "https://share.google/0hQK7L2Pr5nMmk6Yi"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Marshall Visser"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Northern California"
+    },
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "CSLB License",
+      "value": "1162400"
+    },
+    "knowsAbout": [
+      "New Construction",
+      "Remodels and Renovations",
+      "Additions",
+      "Repairs and Improvements"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -359,17 +435,23 @@
     <div class="container footer-main">
       <div class="f-brand">
         <img src="logo-white.png" alt="Visser Construction" width="113" height="80" loading="lazy">
-        <p class="footer-tagline">Quality work and satisfied clients<br>across Northern California.</p>
+        <div>
+          <p class="footer-tagline">Quality work and satisfied clients<br>across Northern California.</p>
+          <p class="footer-google g-mobile"><a href="https://share.google/0hQK7L2Pr5nMmk6Yi" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Find us on Google</span></a></p>
+        </div>
       </div>
       <div class="f-contact">
         <h4>Contact</h4>
         <p><a href="tel:+19256286073">(925) 628-6073</a></p>
         <p><a class="footer-email" href="mailto:marshall@visserconstruction.net">marshall@visserconstruction.net</a></p>
+        <p class="footer-google g-desktop"><a href="https://share.google/0hQK7L2Pr5nMmk6Yi" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Find us on Google</span></a></p>
       </div>
       <div class="f-license">
         <h4>License</h4>
+        <p class="g-desktop-text">Visser Construction LLC</p>
         <p class="lic-line">CSLB <span class="lic-word">License </span>#1162400</p>
-        <p><a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1162400" target="_blank" rel="noopener">Verify at cslb.ca.gov</a></p>
+        <p class="g-mobile"><a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1162400" target="_blank" rel="noopener">Verify at cslb.ca.gov</a></p>
+        <p class="footer-google g-desktop"><a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1162400" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="m9 12 2 2 4-4"/></svg><span>Verify License</span></a></p>
       </div>
     </div>
     <div class="footer-bottom">
