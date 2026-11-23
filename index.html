@@ -330,7 +330,15 @@
     }
     .carousel-track::-webkit-scrollbar { display: none; }
     .carousel-slide { flex: 0 0 100%; scroll-snap-align: start; margin: 0; position: relative; }
-    .carousel-slide img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+    .carousel-slide { aspect-ratio: 4 / 3; overflow: hidden; }
+    .carousel-slide .slide-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; filter: blur(24px) brightness(0.55); transform: scale(1.15);
+    }
+    .carousel-slide .slide-img {
+      position: relative; display: block; width: 100%; height: 100%;
+      object-fit: contain;
+    }
     .carousel-slide figcaption {
       position: absolute; left: 0; right: 0; bottom: 0;
       padding: 28px 20px 14px;
@@ -485,11 +493,53 @@
       <div class="carousel" tabindex="0" aria-roledescription="carousel" aria-label="Project photos">
         <div class="carousel-track">
           <figure class="carousel-slide">
-            <img src="project-1.jpg" alt="New roof framing with exposed rafters and ceiling joists on a home addition" width="1000" height="985" loading="lazy">
+            <img class="slide-bg" src="project-3.jpg" alt="" aria-hidden="true" loading="eager">
+            <img class="slide-img" src="project-3.jpg" alt="Covered patio with an open-beam wood ceiling next to a backyard pool" width="675" height="1200" loading="eager">
+            <figcaption>Covered patio with open-beam ceiling</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img class="slide-bg" src="project-4.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="slide-img" src="project-4.jpg" alt="Exposed wood beams and tongue-and-groove ceiling, viewed from below" width="1125" height="1150" loading="lazy">
+            <figcaption>Exposed beam ceiling</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img class="slide-bg" src="project-5.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="slide-img" src="project-5.jpg" alt="Wood steps with built-in LED lighting under each tread" width="1125" height="844" loading="lazy">
+            <figcaption>Custom steps with built-in lighting</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img class="slide-bg" src="project-6.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="slide-img" src="project-6.jpg" alt="Bright interior with white raised-panel wainscoting and wood-look flooring" width="1200" height="675" loading="lazy">
+            <figcaption>Custom wainscot paneling</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img class="slide-bg" src="project-7.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="slide-img" src="project-7.jpg" alt="Fireplace with a marble-look tile surround and a new wood mantel" width="1116" height="840" loading="lazy">
+            <figcaption>Fireplace surround and mantel</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img class="slide-bg" src="project-8.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="slide-img" src="project-8.jpg" alt="Wood deck with railing and new stair stringers set on a concrete footing" width="675" height="1200" loading="lazy">
+            <figcaption>Deck and stair framing</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img class="slide-bg" src="project-9.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="slide-img" src="project-9.jpg" alt="Hip roof framing with new rafters on a home addition, viewed from above" width="900" height="1200" loading="lazy">
+            <figcaption>Hip roof framing</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img class="slide-bg" src="project-10.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="slide-img" src="project-10.jpg" alt="Interior with a vaulted ceiling, exposed wood ties, and new drywall" width="734" height="1200" loading="lazy">
+            <figcaption>Vaulted ceiling and drywall</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img class="slide-bg" src="project-1.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="slide-img" src="project-1.jpg" alt="New roof framing with exposed rafters and ceiling joists on a home addition" width="1000" height="985" loading="lazy">
             <figcaption>Roof framing for a home addition</figcaption>
           </figure>
           <figure class="carousel-slide">
-            <img src="project-2.jpg" alt="Home addition with new framing and wall sheathing attached to an existing single-story house" width="1000" height="991" loading="lazy">
+            <img class="slide-bg" src="project-2.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="slide-img" src="project-2.jpg" alt="Home addition with new framing and wall sheathing attached to an existing single-story house" width="1000" height="991" loading="lazy">
             <figcaption>Home addition in progress</figcaption>
           </figure>
         </div>
